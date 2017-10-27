@@ -28,6 +28,7 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     self.myMCTableView = tableView;
+    self.myManage = [[MCTableViewManager alloc]init];
     [self loadSettingItems];
     [self.myMCTableView reloadData];
 }
@@ -38,7 +39,6 @@
                         @[[AExampleCell initWithModelWithData:nil withAcitonParams:@[@"AcitonParam --- A"]]],
                         @[[BExampleCell initWithModelWithData:@"B Name" withAcitonParams:@[@"AcitonParam --- B"]]]
                         ];
-    self.myManage = [[MCTableViewManager alloc]init];
     self.myManage.GlobalData = [NSMutableArray arrayWithArray:self.itemsArray];
 }
 #pragma mark - tableview delegate
