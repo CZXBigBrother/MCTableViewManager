@@ -1,5 +1,5 @@
-#革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
-####不想看文章的同学直接上源码Github:[https://github.com/CZXBigBrother/MCTableViewManager](https://github.com/CZXBigBrother/MCTableViewManager)Star一下不会怀孕
+# 革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
+# 不想看文章的同学直接上源码Github:[https://github.com/CZXBigBrother/MCTableViewManager](https://github.com/CZXBigBrother/MCTableViewManager)Star一下不会怀孕
 ```
 曾经的tableview使用
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -20,7 +20,7 @@ return 44;
 }
 ```
 这种使用方式存在巨大的痛点,每次需要改变tableview的结构都需要改变众多的判断,如果结果复杂,改起来都是崩溃的,包括didSelectRowAtIndexPath方法heightForRowAtIndexPath等等都需要一起改变.
-####为了解决这种问题设计了一套新的使用方式,让tableview之后的使用提供了更好的拓展性,让cell的添加修改拓展完全脱离系统的delegate方法
+#### 为了解决这种问题设计了一套新的使用方式,让tableview之后的使用提供了更好的拓展性,让cell的添加修改拓展完全脱离系统的delegate方法
 ```
 看看新的使用方式
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,7 +39,7 @@ return [self.myManage MC_cellheightForRowAtIndexPath:indexPath];
 [self.myManage MC_didSelectRowAtIndexPath:indexPath withTarget:self];
 }
 ```
-###所有的数据通过一个manager管理,只需要改变manager的数据队列就能改变界面的显示
+### 所有的数据通过一个manager管理,只需要改变manager的数据队列就能改变界面的显示
 ```
 那么我们现在来看看如何来创建cell 和点击的方法
 先创建一个模型,通过字符串转义成SEL的方式创建
@@ -146,7 +146,7 @@ self.itemsArray = @[
 }
 ```
 在以后的使用时,需要添加一个cell 类型只需要添加一个类似```- (UITableViewCell *)BExampleCell```的方法,然后改变myManage队列中的数据,就可以重新显示,使之后的使用中完全脱离tableview delegate
-#所有的API
+# 所有的API
 ```
 /**
 初始化
