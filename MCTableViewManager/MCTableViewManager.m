@@ -69,11 +69,27 @@ static NSString * const kShireActionItemParam = @"MCItemActionParams";
     return _GlobalData;
 }
 #pragma mark - runtime
+
+/**
+ 创建一个存在返回的函数
+
+ @param sender 实现函数的对象
+ @param param 传入的参数
+ @param selector SEL
+ @return 执行之后返回的对象
+ */
 - (id)funcTarget:(id)sender withArgument:(id)param withSelector:(SEL)selector {
     id (*new_msgSend0)(id, SEL,...) = (id (*)(id, SEL,...)) objc_msgSend;
     id (*new_msgSend1)(id, SEL, id,...) = (id (*)(id, SEL, id,...)) objc_msgSend;
-    return param == nil ? new_msgSend0(sender,selector) : new_msgSend1(sender,selector,param);
+    return (param == nil || param == [NSNull null]) ? new_msgSend0(sender,selector) : new_msgSend1(sender,selector,param);
 }
+/**
+ 创建一个不存在返回值的函数
+ 
+ @param sender 实现函数的对象
+ @param params 传入的参数
+ @param selector SEL
+ */
 - (void)productFuncTarget:(id)sender withArgumentsList:(id)params withSelector:(SEL)selector {
     NSMutableArray *argumentsList = [[NSMutableArray alloc] initWithArray:params];
     NSUInteger numberOfArguments = [argumentsList count];

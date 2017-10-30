@@ -1,5 +1,4 @@
 # 革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
-# 不想看文章的同学直接上源码Github:[https://github.com/CZXBigBrother/MCTableViewManager](https://github.com/CZXBigBrother/MCTableViewManager)Star一下不会怀孕
 ![image](https://github.com/CZXBigBrother/MCTableViewManager/blob/master/MC.gif)
 ```
 曾经的tableview使用
@@ -201,4 +200,9 @@ ViewController 对象模型中的方法
  @return 返回队列组中的个数
  */
 - (NSInteger)MC_numberOfRowsInSection:(NSInteger)section;
+```
+# 实现原理
+主要通过objectiv-c动态的属性,直接将string转成SEL然后去执行,原理非常的简单,中间也借鉴了jspatch部分的写法,本质上就是下面这样一句话
+```
+id (*new_msgSend0)(id, SEL,...) = (id (*)(id, SEL,...)) objc_msgSend;
 ```
