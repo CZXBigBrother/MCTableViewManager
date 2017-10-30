@@ -1,5 +1,6 @@
 # 革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
 # 不想看文章的同学直接上源码Github:[https://github.com/CZXBigBrother/MCTableViewManager](https://github.com/CZXBigBrother/MCTableViewManager)Star一下不会怀孕
+![image](https://github.com/CZXBigBrother/MCTableViewManager/blob/master/MC.gif)
 ```
 曾经的tableview使用
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
