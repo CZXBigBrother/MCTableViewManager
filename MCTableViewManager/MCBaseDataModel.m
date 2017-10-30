@@ -15,7 +15,7 @@
     data.MCItemCell = nil;
     data.MCItemAction = nil;
     data.MCItemHeight = 0;
-    data.MCItemCellParams = nil;
+    data.MCItemCellParam = nil;
     data.MCItemActionParams = nil;
     return data;
 }

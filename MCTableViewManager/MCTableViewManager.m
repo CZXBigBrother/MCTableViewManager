@@ -15,16 +15,25 @@
 static NSString * const kShireItemAction = @"MCItemAction";
 static NSString * const kShireItemCell = @"MCItemCell";
 static NSString * const kShireItemHeight = @"MCItemHeight";
-static NSString * const kShireCellItemParam = @"MCItemCellParams";
+static NSString * const kShireCellItemParam = @"MCItemCellParam";
 static NSString * const kShireActionItemParam = @"MCItemActionParams";
 
 
 @interface MCTableViewManager()
-
-
+@property (strong, nonatomic) NSMutableArray *GlobalData;
 @end
 
 @implementation MCTableViewManager
+#pragma mark - init
+- (instancetype)initWithDatas:(NSMutableArray *)data {
+    if (self == [super init]) {
+        self.GlobalData = data;
+    }
+    return self;
+}
+- (void)updateDatas:(NSMutableArray *)data {
+    self.GlobalData = data;
+}
 
 #pragma mark - cell
 - (instancetype)MC_cellForRowAtIndexPath:(NSIndexPath *)indexPath withTarget:(id)target{

@@ -14,7 +14,7 @@
     data.MCItemCell = @"BExampleCell:";
     data.MCItemAction = @"BExampleAction:";
     data.MCItemHeight = 100;
-    data.MCItemCellParams = cellParam;
+    data.MCItemCellParam = cellParam;
     data.MCItemActionParams = acitonParams;
     return data;
 }

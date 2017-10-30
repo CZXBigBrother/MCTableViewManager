@@ -39,7 +39,7 @@
                         @[[AExampleCell initWithModelWithData:nil withAcitonParams:@[@"AcitonParam --- A"]]],
                         @[[BExampleCell initWithModelWithData:@"B Name" withAcitonParams:@[@"AcitonParam --- B"]]]
                         ];
-    self.myManage.GlobalData = [NSMutableArray arrayWithArray:self.itemsArray];
+    [self.myManage updateDatas:[NSMutableArray arrayWithArray:self.itemsArray]];
 }
 #pragma mark - tableview delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

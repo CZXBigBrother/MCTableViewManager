@@ -10,7 +10,19 @@
 #import <UIKit/UIKit.h>
 
 @interface MCTableViewManager : NSObject
-@property (strong, nonatomic) NSMutableArray *GlobalData;
+/**
+ 初始化
+
+ @param data 数据队列
+ */
+- (instancetype)initWithDatas:(NSMutableArray *)data;
+
+/**
+ 更新队列
+
+ @param data 队列数据
+ */
+- (void)updateDatas:(NSMutableArray *)data;
 
 /**
  返回cell
