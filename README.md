@@ -1,5 +1,4 @@
 #革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
-####不想看文章的同学直接上源码Github:[https://github.com/CZXBigBrother/MCTableViewManager](https://github.com/CZXBigBrother/MCTableViewManager)Star一下不会怀孕
 ```
 曾经的tableview使用
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,7 +145,8 @@ ViewController 对象模型中的方法
 }
 ```
 在以后的使用时,需要添加一个cell 类型只需要添加一个类似```- (UITableViewCell *)BExampleCell```的方法,然后改变myManage队列中的数据,就可以重新显示,使之后的使用中完全脱离tableview delegate
-##所有的API
+
+###所有的API
 ```
 /**
  初始化
