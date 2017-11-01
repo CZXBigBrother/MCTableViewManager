@@ -21,6 +21,7 @@
 ```
 这种使用方式存在巨大的痛点,每次需要改变tableview的结构都需要改变众多的判断,如果结果复杂,改起来都是崩溃的,包括didSelectRowAtIndexPath方法heightForRowAtIndexPath等等都需要一起改变.
 #### 为了解决这种问题设计了一套新的使用方式,让tableview之后的使用提供了更好的拓展性,让cell的添加修改拓展完全脱离系统的delegate方法
+###### PS:什么情况下适合使用这套框架:1:tableview中种类多,结果复杂 2:需要更新实际情况动态的改变cell的显示结构,对于这两种情况使用这套框架是非常爽的,但是对于结构单一 比如 只存在一种cell 类型等,就不必使用了,反而会增加你的工作量
 ```
 看看新的使用方式
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
