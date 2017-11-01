@@ -134,7 +134,7 @@ ViewController 对象模型中的方法
 }
 
 ```
-##加载数据的方式
+## 加载数据的方式
 ```
 #pragma mark - 模拟数据加载
 - (void)loadSettingItems
