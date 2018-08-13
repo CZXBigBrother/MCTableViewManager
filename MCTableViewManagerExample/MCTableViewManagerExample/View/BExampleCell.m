@@ -12,7 +12,8 @@
 + (instancetype)initWithModelWithData:(id)cellParam withAcitonParams:(id)acitonParams {
     BExampleCell * data = [[BExampleCell alloc]init];
     data.MCItemCell = @"BExampleCell:";
-    data.MCItemAction = @"BExampleAction:";
+//    data.MCItemAction = @"BExampleAction:";
+    data.MCItemAction = @"BExampleActionMultiplicityParam:withBParam:";
     data.MCItemHeight = 100;
     data.MCItemCellParam = cellParam;
     data.MCItemActionParams = acitonParams;

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4118E7572112F60B007C577A /* MCTableViewManagerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4118E7562112F60B007C577A /* MCTableViewManagerExampleTests.m */; };
+		41AEDA93211AD73900208023 /* MCBaseHeaderFooterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AEDA92211AD73900208023 /* MCBaseHeaderFooterDataModel.m */; };
+		41CE55E7211303570081F3A9 /* CTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CE55E6211303570081F3A9 /* CTableViewCell.m */; };
+		41CE55EA21141F060081F3A9 /* InstanceExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CE55E921141F060081F3A9 /* InstanceExampleController.m */; };
+		41CE55ED211422C80081F3A9 /* FuncInitExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CE55EC211422C80081F3A9 /* FuncInitExampleController.m */; };
+		41CE55F021143AAA0081F3A9 /* MCTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CE55EF21143AAA0081F3A9 /* MCTableViewDelegate.m */; };
 		41E2BAD91FA31B9D0086BA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E2BAD81FA31B9D0086BA89 /* AppDelegate.m */; };
 		41E2BADC1FA31B9D0086BA89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E2BADB1FA31B9D0086BA89 /* ViewController.m */; };
 		41E2BAE11FA31B9D0086BA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41E2BAE01FA31B9D0086BA89 /* Assets.xcassets */; };
@@ -18,7 +24,30 @@
 		41E2BAF91FA31DF20086BA89 /* BExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E2BAF81FA31DF20086BA89 /* BExampleCell.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4118E7592112F60B007C577A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41E2BACC1FA31B9C0086BA89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41E2BAD31FA31B9C0086BA89;
+			remoteInfo = MCTableViewManagerExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4118E7542112F60B007C577A /* MCTableViewManagerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCTableViewManagerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4118E7562112F60B007C577A /* MCTableViewManagerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTableViewManagerExampleTests.m; sourceTree = "<group>"; };
+		4118E7582112F60B007C577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41AEDA91211AD73900208023 /* MCBaseHeaderFooterDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCBaseHeaderFooterDataModel.h; sourceTree = "<group>"; };
+		41AEDA92211AD73900208023 /* MCBaseHeaderFooterDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCBaseHeaderFooterDataModel.m; sourceTree = "<group>"; };
+		41CE55E5211303570081F3A9 /* CTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTableViewCell.h; sourceTree = "<group>"; };
+		41CE55E6211303570081F3A9 /* CTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTableViewCell.m; sourceTree = "<group>"; };
+		41CE55E821141F060081F3A9 /* InstanceExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstanceExampleController.h; sourceTree = "<group>"; };
+		41CE55E921141F060081F3A9 /* InstanceExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstanceExampleController.m; sourceTree = "<group>"; };
+		41CE55EB211422C80081F3A9 /* FuncInitExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FuncInitExampleController.h; sourceTree = "<group>"; };
+		41CE55EC211422C80081F3A9 /* FuncInitExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuncInitExampleController.m; sourceTree = "<group>"; };
+		41CE55EE21143AAA0081F3A9 /* MCTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTableViewDelegate.h; sourceTree = "<group>"; };
+		41CE55EF21143AAA0081F3A9 /* MCTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTableViewDelegate.m; sourceTree = "<group>"; };
 		41E2BAD41FA31B9C0086BA89 /* MCTableViewManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCTableViewManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E2BAD71FA31B9C0086BA89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		41E2BAD81FA31B9D0086BA89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4118E7512112F60A007C577A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41E2BAD11FA31B9C0086BA89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +85,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4118E7552112F60B007C577A /* MCTableViewManagerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4118E7562112F60B007C577A /* MCTableViewManagerExampleTests.m */,
+				4118E7582112F60B007C577A /* Info.plist */,
+			);
+			path = MCTableViewManagerExampleTests;
+			sourceTree = "<group>";
+		};
+		41CE55F121143AFF0081F3A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41CE55E5211303570081F3A9 /* CTableViewCell.h */,
+				41CE55E6211303570081F3A9 /* CTableViewCell.m */,
+				41E2BAF41FA31DDF0086BA89 /* AExampleCell.h */,
+				41E2BAF51FA31DDF0086BA89 /* AExampleCell.m */,
+				41E2BAF71FA31DF20086BA89 /* BExampleCell.h */,
+				41E2BAF81FA31DF20086BA89 /* BExampleCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41CE55F221143B0A0081F3A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				41CE55EB211422C80081F3A9 /* FuncInitExampleController.h */,
+				41CE55EC211422C80081F3A9 /* FuncInitExampleController.m */,
+				41CE55E821141F060081F3A9 /* InstanceExampleController.h */,
+				41CE55E921141F060081F3A9 /* InstanceExampleController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		41E2BACB1FA31B9C0086BA89 = {
 			isa = PBXGroup;
 			children = (
 				41E2BAD61FA31B9C0086BA89 /* MCTableViewManagerExample */,
+				4118E7552112F60B007C577A /* MCTableViewManagerExampleTests */,
 				41E2BAD51FA31B9C0086BA89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				41E2BAD41FA31B9C0086BA89 /* MCTableViewManagerExample.app */,
+				4118E7542112F60B007C577A /* MCTableViewManagerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,15 +139,13 @@
 		41E2BAD61FA31B9C0086BA89 /* MCTableViewManagerExample */ = {
 			isa = PBXGroup;
 			children = (
-				41E2BAF41FA31DDF0086BA89 /* AExampleCell.h */,
-				41E2BAF51FA31DDF0086BA89 /* AExampleCell.m */,
-				41E2BAF71FA31DF20086BA89 /* BExampleCell.h */,
-				41E2BAF81FA31DF20086BA89 /* BExampleCell.m */,
+				41CE55F221143B0A0081F3A9 /* Controller */,
+				41CE55F121143AFF0081F3A9 /* View */,
+				41E2BADA1FA31B9D0086BA89 /* ViewController.h */,
+				41E2BADB1FA31B9D0086BA89 /* ViewController.m */,
 				41E2BAED1FA31C080086BA89 /* MCTableViewManager */,
 				41E2BAD71FA31B9C0086BA89 /* AppDelegate.h */,
 				41E2BAD81FA31B9D0086BA89 /* AppDelegate.m */,
-				41E2BADA1FA31B9D0086BA89 /* ViewController.h */,
-				41E2BADB1FA31B9D0086BA89 /* ViewController.m */,
 				41E2BAE01FA31B9D0086BA89 /* Assets.xcassets */,
 				41E2BAE21FA31B9D0086BA89 /* LaunchScreen.storyboard */,
 				41E2BAE51FA31B9D0086BA89 /* Info.plist */,
@@ -92,6 +161,10 @@
 				41E2BAEF1FA31C080086BA89 /* MCBaseDataModel.m */,
 				41E2BAF01FA31C080086BA89 /* MCTableViewManager.h */,
 				41E2BAF11FA31C080086BA89 /* MCTableViewManager.m */,
+				41CE55EE21143AAA0081F3A9 /* MCTableViewDelegate.h */,
+				41CE55EF21143AAA0081F3A9 /* MCTableViewDelegate.m */,
+				41AEDA91211AD73900208023 /* MCBaseHeaderFooterDataModel.h */,
+				41AEDA92211AD73900208023 /* MCBaseHeaderFooterDataModel.m */,
 			);
 			name = MCTableViewManager;
 			path = ../../MCTableViewManager;
@@ -100,6 +173,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4118E7532112F60A007C577A /* MCTableViewManagerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4118E75B2112F60B007C577A /* Build configuration list for PBXNativeTarget "MCTableViewManagerExampleTests" */;
+			buildPhases = (
+				4118E7502112F60A007C577A /* Sources */,
+				4118E7512112F60A007C577A /* Frameworks */,
+				4118E7522112F60A007C577A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4118E75A2112F60B007C577A /* PBXTargetDependency */,
+			);
+			name = MCTableViewManagerExampleTests;
+			productName = MCTableViewManagerExampleTests;
+			productReference = 4118E7542112F60B007C577A /* MCTableViewManagerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		41E2BAD31FA31B9C0086BA89 /* MCTableViewManagerExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41E2BAEA1FA31B9D0086BA89 /* Build configuration list for PBXNativeTarget "MCTableViewManagerExample" */;
@@ -126,6 +217,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "marco chen";
 				TargetAttributes = {
+					4118E7532112F60A007C577A = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 41E2BAD31FA31B9C0086BA89;
+					};
 					41E2BAD31FA31B9C0086BA89 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -146,11 +242,19 @@
 			projectRoot = "";
 			targets = (
 				41E2BAD31FA31B9C0086BA89 /* MCTableViewManagerExample */,
+				4118E7532112F60A007C577A /* MCTableViewManagerExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4118E7522112F60A007C577A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41E2BAD21FA31B9C0086BA89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,21 +267,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4118E7502112F60A007C577A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4118E7572112F60B007C577A /* MCTableViewManagerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41E2BAD01FA31B9C0086BA89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41CE55ED211422C80081F3A9 /* FuncInitExampleController.m in Sources */,
 				41E2BAF21FA31CFC0086BA89 /* MCBaseDataModel.m in Sources */,
+				41CE55E7211303570081F3A9 /* CTableViewCell.m in Sources */,
 				41E2BAF31FA31CFD0086BA89 /* MCTableViewManager.m in Sources */,
+				41CE55F021143AAA0081F3A9 /* MCTableViewDelegate.m in Sources */,
 				41E2BAF61FA31DDF0086BA89 /* AExampleCell.m in Sources */,
 				41E2BADC1FA31B9D0086BA89 /* ViewController.m in Sources */,
+				41CE55EA21141F060081F3A9 /* InstanceExampleController.m in Sources */,
 				41E2BAE71FA31B9D0086BA89 /* main.m in Sources */,
 				41E2BAF91FA31DF20086BA89 /* BExampleCell.m in Sources */,
+				41AEDA93211AD73900208023 /* MCBaseHeaderFooterDataModel.m in Sources */,
 				41E2BAD91FA31B9D0086BA89 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4118E75A2112F60B007C577A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41E2BAD31FA31B9C0086BA89 /* MCTableViewManagerExample */;
+			targetProxy = 4118E7592112F60B007C577A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41E2BAE21FA31B9D0086BA89 /* LaunchScreen.storyboard */ = {
@@ -191,6 +316,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4118E75C2112F60B007C577A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7ZHUDCZT7;
+				INFOPLIST_FILE = MCTableViewManagerExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marco-chen.MCTableViewManagerExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCTableViewManagerExample.app/MCTableViewManagerExample";
+			};
+			name = Debug;
+		};
+		4118E75D2112F60B007C577A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7ZHUDCZT7;
+				INFOPLIST_FILE = MCTableViewManagerExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marco-chen.MCTableViewManagerExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCTableViewManagerExample.app/MCTableViewManagerExample";
+			};
+			name = Release;
+		};
 		41E2BAE81FA31B9D0086BA89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -326,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4118E75B2112F60B007C577A /* Build configuration list for PBXNativeTarget "MCTableViewManagerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4118E75C2112F60B007C577A /* Debug */,
+				4118E75D2112F60B007C577A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		41E2BACF1FA31B9C0086BA89 /* Build configuration list for PBXProject "MCTableViewManagerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

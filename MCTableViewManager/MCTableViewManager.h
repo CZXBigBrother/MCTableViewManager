@@ -63,4 +63,10 @@
  @return 返回队列组中的个数
  */
 - (NSInteger)MC_numberOfRowsInSection:(NSInteger)section;
+
+- (CGFloat)MC_heightForFooterInSection:(NSInteger)section;
+- (CGFloat)MC_heightForHeaderInSection:(NSInteger)section;
+
+- (UIView *)MC_viewForHeaderInSection:(NSInteger)section;
+- (UIView *)MC_viewForFooterInSection:(NSInteger)section;
 @end

@@ -9,6 +9,7 @@
 
 #import "MCTableViewManager.h"
 #import "MCBaseDataModel.h"
+#import "MCBaseHeaderFooterDataModel.h"
 #import <stdio.h>
 #import <objc/message.h>
 
@@ -17,6 +18,7 @@ static NSString * const kShireItemCell = @"MCItemCell";
 static NSString * const kShireItemHeight = @"MCItemHeight";
 static NSString * const kShireCellItemParam = @"MCItemCellParam";
 static NSString * const kShireActionItemParam = @"MCItemActionParams";
+static NSString * const kShireSetDataActionItemParam = @"MCItemSetDataAction";
 
 
 @interface MCTableViewManager()
@@ -36,17 +38,27 @@ static NSString * const kShireActionItemParam = @"MCItemActionParams";
 }
 
 #pragma mark - cell
-- (instancetype)MC_cellForRowAtIndexPath:(NSIndexPath *)indexPath withTarget:(id)target{
-    MCBaseDataModel *item = self.GlobalData[indexPath.section][indexPath.row];    
-    SEL getCellSelector = NSSelectorFromString([item valueForKeyPath:kShireItemCell]);
-    return [self funcTarget:target withArgument:[item valueForKeyPath:kShireCellItemParam] withSelector:getCellSelector];
+- (id)MC_cellForRowAtIndexPath:(NSIndexPath *)indexPath withTarget:(id)target{
+    MCBaseDataModel *item = [self.GlobalData[indexPath.section] items][indexPath.row];
+    id cell = [item valueForKeyPath:kShireItemCell];
+    if ([cell isKindOfClass:[NSString class]]) {
+        SEL getCellSelector = NSSelectorFromString(cell);
+        return [self funcTarget:target withArgument:[item valueForKeyPath:kShireCellItemParam] withSelector:getCellSelector];
+    }else if([cell isKindOfClass:[UITableViewCell class]]){
+        SEL getCellSelector = NSSelectorFromString([item valueForKeyPath:kShireSetDataActionItemParam]);
+        [self funcTarget:cell withArgument:[item valueForKeyPath:kShireCellItemParam] withSelector:getCellSelector];
+        return cell;
+    }else {
+        return (id)[[UITableViewCell alloc]init];
+    }
+    
 }
 - (CGFloat)MC_cellheightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MCBaseDataModel *item = self.GlobalData[indexPath.section][indexPath.row];
+    MCBaseDataModel *item = [self.GlobalData[indexPath.section] items][indexPath.row];
     return [[item valueForKeyPath:kShireItemHeight] doubleValue];
 }
 - (void)MC_didSelectRowAtIndexPath:(NSIndexPath *)indexPath withTarget:(id)target {
-    MCBaseDataModel *item = self.GlobalData[indexPath.section][indexPath.row];
+    MCBaseDataModel *item = [self.GlobalData[indexPath.section] items][indexPath.row];
     if ([[item valueForKeyPath:kShireItemAction] isEqual:[NSNull null]] || [item valueForKeyPath:kShireItemAction] == nil) {return;}
     SEL actionSelector = NSSelectorFromString([item valueForKeyPath:kShireItemAction]);
     if ([target respondsToSelector:actionSelector]) {
@@ -59,7 +71,19 @@ static NSString * const kShireActionItemParam = @"MCItemActionParams";
     return [self.GlobalData count];
 }
 - (NSInteger)MC_numberOfRowsInSection:(NSInteger)section {
-    return [self.GlobalData[section] count];
+    return [[self.GlobalData[section]items] count];
+}
+- (CGFloat)MC_heightForFooterInSection:(NSInteger)section {
+    return [self.GlobalData[section]MCItemFooterHeight] ? :FLT_MIN;
+}
+- (CGFloat)MC_heightForHeaderInSection:(NSInteger)section {
+    return [self.GlobalData[section]MCItemHeaderHeight] ? :FLT_MIN;
+}
+- (UIView *)MC_viewForHeaderInSection:(NSInteger)section {
+    return [self.GlobalData[section]MCItemHeader];
+}
+- (UIView *)MC_viewForFooterInSection:(NSInteger)section {
+    return [self.GlobalData[section]MCItemFooter];
 }
 #pragma mark - lazy
 - (NSMutableArray *)GlobalData {
@@ -69,7 +93,6 @@ static NSString * const kShireActionItemParam = @"MCItemActionParams";
     return _GlobalData;
 }
 #pragma mark - runtime
-
 /**
  创建一个存在返回的函数
 
@@ -83,11 +106,12 @@ static NSString * const kShireActionItemParam = @"MCItemActionParams";
     id (*new_msgSend1)(id, SEL, id,...) = (id (*)(id, SEL, id,...)) objc_msgSend;
     return (param == nil || param == [NSNull null]) ? new_msgSend0(sender,selector) : new_msgSend1(sender,selector,param);
 }
+
 /**
  创建一个不存在返回值的函数
  
  @param sender 实现函数的对象
- @param params 传入的参数
+ @param params 传入的参数(必须是数组)
  @param selector SEL
  */
 - (void)productFuncTarget:(id)sender withArgumentsList:(id)params withSelector:(SEL)selector {
