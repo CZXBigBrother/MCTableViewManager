@@ -1,6 +1,6 @@
-# 革命性的UITableView的使用体验,彻底告别(新版本正在测试中,文档还未更新) ~~```ifelse```~~
+# 革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
 ![image](https://github.com/CZXBigBrother/MCTableViewManager/blob/master/MC.gif)
-## 曾经的tableview使用(新版本正在测试中,文档还未更新
+## 曾经的tableview使用
 ```
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
