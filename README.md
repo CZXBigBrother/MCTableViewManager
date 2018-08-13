@@ -1,7 +1,7 @@
 # 革命性的UITableView的使用体验,彻底告别 ~~```ifelse```~~
 ![image](https://github.com/CZXBigBrother/MCTableViewManager/blob/master/MC.gif)
+## 曾经的tableview使用
 ```
-曾经的tableview使用
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     xxxxCell * cell = [xxxxCell cellWithTableView:tableView];
@@ -20,6 +20,7 @@
 }
 ```
 这种使用方式存在巨大的痛点,每次需要改变tableview的结构都需要改变众多的判断,如果结果复杂,改起来都是崩溃的,包括didSelectRowAtIndexPath方法heightForRowAtIndexPath等等都需要一起改变.
+## Example
 #### 为了解决这种问题设计了一套新的使用方式,让tableview之后的使用提供了更好的拓展性,让cell的添加修改拓展完全脱离系统的delegate方法
 ###### PS:什么情况下适合使用这套框架:1:tableview中种类多,结果复杂 2:需要更新实际情况动态的改变cell的显示结构,对于这两种情况使用这套框架是非常爽的,但是对于结构单一 比如 只存在一种cell 类型等,就不必使用了,反而会增加你的工作量
 ```
@@ -134,7 +135,8 @@ ViewController 对象模型中的方法
 }
 
 ```
-## 加载数据的方式
+## Usage
+### 加载数据的方式
 ```
 #pragma mark - 模拟数据加载
 - (void)loadSettingItems
@@ -147,7 +149,7 @@ ViewController 对象模型中的方法
 }
 ```
 在以后的使用时,需要添加一个cell 类型只需要添加一个类似```- (UITableViewCell *)BExampleCell```的方法,然后改变myManage队列中的数据,就可以重新显示,使之后的使用中完全脱离tableview delegate
-# 所有的API
+## Extensions
 ```
 /**
  初始化
@@ -202,7 +204,7 @@ ViewController 对象模型中的方法
  */
 - (NSInteger)MC_numberOfRowsInSection:(NSInteger)section;
 ```
-# 实现原理
+## 实现原理
 主要通过objectiv-c动态的属性,直接将string转成SEL然后去执行,原理非常的简单,中间也借鉴了jspatch部分的写法,本质上就是下面这样一句话
 ```
 id (*new_msgSend0)(id, SEL,...) = (id (*)(id, SEL,...)) objc_msgSend;
