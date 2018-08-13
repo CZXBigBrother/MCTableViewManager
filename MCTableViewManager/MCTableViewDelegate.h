@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface MCTableViewDelegate : NSObject
+@interface MCTableViewDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) id<UITableViewDelegate,UITableViewDataSource> MCDelegate;
-
+@property (weak, nonatomic) id target;
+- (instancetype)initWithTarget:(id)target;
 - (void)updateDatas:(NSArray *)arr;
 - (void)addObjectsDatas:(NSArray *)arr;
 @end

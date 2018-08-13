@@ -9,20 +9,28 @@
 #import "MCTableViewDelegate.h"
 #import "MCTableViewManager.h"
 
-@interface MCTableViewDelegate()<UITableViewDelegate,UITableViewDataSource>
+@interface MCTableViewDelegate()
 @property (strong, nonatomic) MCTableViewManager *myManage;
 @property (nonatomic, strong) NSMutableArray *itemsArray;
 
 @end
 
 @implementation MCTableViewDelegate
-- (instancetype)init
+
+- (instancetype)initWithTarget:(id)target
 {
     self = [super init];
     if (self) {
         self.myManage = [[MCTableViewManager alloc]init];
+        self.target = target;
     }
     return self;
+}
+- (NSMutableArray *)itemsArray {
+    if (_itemsArray == nil) {
+        _itemsArray = [NSMutableArray array];
+    }
+    return _itemsArray;
 }
 - (void)updateDatas:(NSArray *)arr {
     self.itemsArray = [NSMutableArray arrayWithArray:arr];
@@ -50,7 +58,7 @@
     if ([self.MCDelegate respondsToSelector:@selector(tableView:cellForRowAtIndexPath:)]) {
         return [self.MCDelegate tableView:tableView cellForRowAtIndexPath:indexPath];
     }
-    return (UITableViewCell *)[self.myManage MC_cellForRowAtIndexPath:indexPath withTarget:self];
+    return (UITableViewCell *)[self.myManage MC_cellForRowAtIndexPath:indexPath withTarget:self.target];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.MCDelegate respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
@@ -63,7 +71,7 @@
         [self.MCDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
         return;
     }
-    [self.myManage MC_didSelectRowAtIndexPath:indexPath withTarget:self];
+    [self.myManage MC_didSelectRowAtIndexPath:indexPath withTarget:self.target];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if ([self.MCDelegate respondsToSelector:@selector(tableView:heightForFooterInSection:)]) {
